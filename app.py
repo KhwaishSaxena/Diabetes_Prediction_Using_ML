@@ -3,8 +3,8 @@ import streamlit as st
 def main():
     pg = st.navigation([
         
-        st.Page("pages/About_project.py", title="Home"),
-        st.Page('pages/Prediction.py', title="Predict"),
+        st.title("Diabetes Prediction Using Machine Learning")
+        st.write("Welcome to the Home Page of the Diabetes Prediction App.")
     ])
     pg.run()
 
