@@ -25,16 +25,16 @@ if st.button("Predict"):
 
     def predict(input_array):
         y_pred=model.predict(input_array)
-        y_prob=model.predict_proba(input_array)
+        y_prob=model.predict_proba(input_array)[0][1]
         if y_pred == 1:
-            prediction = "Based on your input"
+            prediction = "Diabetic "
             confidence = y_prob
         else:
-            prediction = "Great News! No Indication of Diabetes"
+            prediction = " Non Diabetic"
             confidence = (100 - y_prob)
 
-        st.markdown(f"Based on your input : {prediction}")
-        st.markdown(f"Confidence : {confidence}")
+        st.markdown(f"Based on your input: {prediction}")
+        st.markdown(f"Confidence: {confidence}")
     on_click=predict(input_array)
 
 if __name__ == '__page__':
