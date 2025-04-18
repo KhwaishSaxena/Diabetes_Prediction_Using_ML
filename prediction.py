@@ -20,7 +20,7 @@ if st.button("Predict"):
 
     def predict(input_array):
         y_pred=model.predict(input_array)
-        y_prob=model.predict_proba(input_array)[0][1]
+        y_prob=model.predict_proba(input_array)[0][1]*100
         if y_pred == 1:
             prediction = "Diabetic "
             confidence = y_prob
