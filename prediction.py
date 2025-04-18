@@ -6,13 +6,13 @@ import pickle
 model = pickle.load(open("model.pkl", "rb"))
     
 st.title('Diabetes Prediction Using Machine Learning')
-Pregnancies=st.number_input("Pregnancies",min_value=0,format="%d",help="Number of times Pregnant")
+Pregnancies=st.number_input("Pregnancies",min_value=0,format="%d",help="Number of pregnancies")
 Glucose=st.number_input("Glucose",min_value=0,format="%d",help="Plasma Glucose Concentration")
-BloodPressure=st.number_input("BloodPressure",min_value=0,format="%d",help="Diastolic Blood Pressure (mm Hg)")
-SkinThickness=st.number_input("SKinThickness",min_value=0,format="%d",help="Triceps skin fold thickness (in mm)")
+BloodPressure=st.number_input("Blood Pressure",min_value=0,format="%d",help="Diastolic Blood Pressure (mm Hg)")
+SkinThickness=st.number_input("Skin Thickness",min_value=0,format="%d",help="Triceps skin fold thickness (in mm)")
 Insulin=st.number_input("Insulin",min_value=0,format="%d",help="2-Hour Serum Insulin (mu U/ml)")
 BMI=st.number_input("BMI",min_value=0.0,help="Body Mass Index")
-DiabetesPedigreeFunction=st.number_input("DiabetesPedigreeFunction",help="likelihood of diabetes based on genetic/hereditary factors")
+DiabetesPedigreeFunction=st.number_input("Diabetes Pedigree Function",help="Likelihood of diabetes based on genetic/hereditary factors")
 Age=st.number_input("Age",min_value=0,max_value=100,format="%d",help="Age in years")
 
 if st.button("Predict"):
@@ -29,7 +29,7 @@ if st.button("Predict"):
             confidence = (100 - y_prob)
 
         st.markdown(f"Based on your input: {prediction}")
-        st.markdown(f"Confidence: {confidence}")
+        st.markdown(f"Confidence: {confidence:.2f}%")
     on_click=predict(input_array)
 
 if __name__ == '__page__':
