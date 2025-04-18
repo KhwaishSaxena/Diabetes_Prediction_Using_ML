@@ -3,11 +3,6 @@ import pandas as pd
 import numpy as np
 import pickle
 
-st.set_page_config(
-    page_title="Hello",
-    page_icon="👋",
-)
-
 model = pickle.load(open("model.pkl", "rb"))
     
 st.title('Diabetes Prediction Using Machine Learning')
