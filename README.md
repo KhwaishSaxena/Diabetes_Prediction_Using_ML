@@ -23,18 +23,25 @@ This project predicts whether an individual is diabetic based on various health 
 6. **Deployment with Streamlit**
 
 ### Install the dependencies with:
-- pip install -r requirements.txt
-
+```
+pip install -r requirements.txt
+```
 ## Run the app
 
 1. **Clone the repository**
-    git clone 
-    cd Diabetes_Prediction_Using_ML
+```
+git clone https://github.com/KhwaishSaxena/Diabetes_Prediction_Using_ML.git
+cd Diabetes_Prediction_Using_ML
+```
 2. **Install dependencies**
-    pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 3. **Run the Streamlit app**
-    streamlit run app.py
+```
+streamlit run app.py
+```
 
 ## Live Demo
 
- https://diabetes-prediction-using-ml-ks.streamlit.app/
+[Diabetes Prediction App](https://diabetes-prediction-using-ml-ks.streamlit.app/)
